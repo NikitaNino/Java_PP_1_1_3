@@ -28,19 +28,19 @@
     <loaded-nodes />
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
+    <connection id="9616f04b-01d0-42ce-a7b2-9832acb4c926">
+      <console name="user_db" type="STANDARD" schema="mysql" session="Main" />
+    </connection>
     <connection id="d8649719-b47a-4122-be84-38176a136f99">
       <console name="Connection" type="STANDARD" schema="mysql" session="Main" />
-    </connection>
-    <connection id="9616f04b-01d0-42ce-a7b2-9832acb4c926">
-      <console name="Connection 1" type="STANDARD" schema="mysql" session="Main" />
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
     <open-files />
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
-    <connection id="d8649719-b47a-4122-be84-38176a136f99" />
     <connection id="9616f04b-01d0-42ce-a7b2-9832acb4c926" />
+    <connection id="d8649719-b47a-4122-be84-38176a136f99" />
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />
@@ -71,9 +71,9 @@
   </component>
   <component name="DBNavigator.Project.Settings">
     <connections>
-      <connection id="d8649719-b47a-4122-be84-38176a136f99" active="true" signed="true">
+      <connection id="9616f04b-01d0-42ce-a7b2-9832acb4c926" active="true" signed="true">
         <database>
-          <name value="Connection" />
+          <name value="user_db" />
           <description value="" />
           <database-type value="MYSQL" />
           <config-type value="BASIC" />
@@ -86,7 +86,7 @@
           <port value="3306" />
           <database value="mysql" />
           <type value="USER_PASSWORD" />
-          <user value="root" />
+          <user value="Admin" />
           <deprecated-pwd value="MTIzNA==" />
         </database>
         <properties>
@@ -155,9 +155,9 @@
           <object-name-filters />
         </object-filters>
       </connection>
-      <connection id="9616f04b-01d0-42ce-a7b2-9832acb4c926" active="true" signed="true">
+      <connection id="d8649719-b47a-4122-be84-38176a136f99" active="true" signed="true">
         <database>
-          <name value="Connection 1" />
+          <name value="Connection" />
           <description value="" />
           <database-type value="MYSQL" />
           <config-type value="BASIC" />
@@ -170,7 +170,7 @@
           <port value="3306" />
           <database value="mysql" />
           <type value="USER_PASSWORD" />
-          <user value="Admin" />
+          <user value="root" />
           <deprecated-pwd value="MTIzNA==" />
         </database>
         <properties>

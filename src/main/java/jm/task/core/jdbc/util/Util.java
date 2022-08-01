@@ -6,22 +6,18 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class Util {
-    public static final String NAMEUSER = "Admin";
-    public static final String PASSWORD = "1234";
-    public static final String URL = "jdbc:mysql://localhost:3306/mysql";
-    public static Statement statement;
-    public static Connection connection;
+    private static final String USERNAME = "Admin";
+    private static final String PASSWORD = "1234";
+    private static final String URL = "jdbc:mysql://localhost:3306/name_db";
 
-    static {
-        try {
-            connection = DriverManager.getConnection(URL, NAMEUSER, PASSWORD);
-        } catch (SQLException throwables) {
-            throwables.getStackTrace();
-            throw new RuntimeException();
-        }
-    }
 
     public static Connection getConnection() {
+        Connection connection = null;
+        try {
+            connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
+        } catch (SQLException e) {
+            System.err.println("Подключение не было выполнено");
+        }
         return connection;
     }
 }
