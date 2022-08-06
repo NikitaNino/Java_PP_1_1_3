@@ -29,6 +29,9 @@ public class Util {
     }
 
     private static SessionFactory sessionFactory;
+    /*
+     (Сделать изменения в константах в SessionFactory? Я теперь понял, что можно с предыдущего соединения брать USER and PASS, БД разные)
+     */
 
     public static SessionFactory getSessionFactory() {
         if (sessionFactory == null) {
