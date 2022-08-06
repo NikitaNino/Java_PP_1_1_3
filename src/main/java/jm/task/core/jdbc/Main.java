@@ -1,7 +1,10 @@
 package jm.task.core.jdbc;
 
 import jm.task.core.jdbc.dao.UserDao;
+import jm.task.core.jdbc.dao.UserDaoHibernateImpl;
 import jm.task.core.jdbc.dao.UserDaoJDBCImpl;
+import jm.task.core.jdbc.service.UserService;
+import jm.task.core.jdbc.service.UserServiceImpl;
 
 public class Main {
     public static void main(String[] args) {
@@ -15,6 +18,17 @@ public class Main {
         userDao.getAllUsers().forEach(x-> System.out.println(x.toString()));
         userDao.cleanUsersTable();
         userDao.dropUsersTable();
-        // реализуйте алгоритм здесь
+
+        UserDao userDao1 = new UserDaoHibernateImpl();
+        userDao1.createUsersTable();
+        userDao1.saveUser("Евгений", "Евгеневич", (byte) 33);
+        userDao1.saveUser("Anton", "Antonovich", (byte) 33);
+        userDao1.saveUser("Mihail", "Mihalovich", (byte) 33);
+        userDao1.saveUser("Leonid", "Leonidovich", (byte) 33);
+        userDao1.removeUserById(1);
+        userDao1.getAllUsers().forEach(x-> System.out.println(x.toString()));
+        userDao1.cleanUsersTable();
+        userDao1.dropUsersTable();
+//         реализуйте алгоритм здесь
     }
 }
