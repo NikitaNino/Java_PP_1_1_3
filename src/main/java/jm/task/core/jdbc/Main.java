@@ -8,16 +8,16 @@ import jm.task.core.jdbc.service.UserServiceImpl;
 
 public class Main {
     public static void main(String[] args) {
-        UserDao userDao = new UserDaoJDBCImpl();
-        userDao.createUsersTable();
-        userDao.saveUser("Максим", "Максович", (byte) 23);
-        userDao.saveUser("Антон", "Викторович", (byte) 32);
-        userDao.saveUser("Лев", "Львович", (byte) 25);
-        userDao.saveUser("Юрий", "Юрьевич", (byte) 63);
-        userDao.removeUserById(2);
-        userDao.getAllUsers().forEach(x-> System.out.println(x.toString()));
-        userDao.cleanUsersTable();
-        userDao.dropUsersTable();
+//        UserDao userDao = new UserDaoJDBCImpl();
+//        userDao.createUsersTable();
+//        userDao.saveUser("Максим", "Максович", (byte) 23);
+//        userDao.saveUser("Антон", "Викторович", (byte) 32);
+//        userDao.saveUser("Лев", "Львович", (byte) 25);
+//        userDao.saveUser("Юрий", "Юрьевич", (byte) 63);
+//        userDao.removeUserById(2);
+//        userDao.getAllUsers().forEach(x-> System.out.println(x.toString()));
+//        userDao.cleanUsersTable();
+//        userDao.dropUsersTable();
 
         UserDao userDao1 = new UserDaoHibernateImpl();
         userDao1.createUsersTable();
